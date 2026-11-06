@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RCHD | Painel técnico</title><link rel="stylesheet" href="/tech/style.css"></head>
+<body>
+<div id="auth-screen" class="auth-screen"><form id="login-form" class="auth-card"><div class="brand">RCHD<span>.</span></div><p class="eyebrow">ÁREA TÉCNICA</p><h1>Acessar painel</h1><div id="setup-box" class="hidden"><p class="muted">Primeiro acesso: crie a conta administradora.</p><label>Nome<input name="setupName" placeholder="Seu nome"></label></div><label>E-mail<input name="email" type="email" required></label><label>Senha<input name="password" type="password" required minlength="8"></label><button class="button" type="submit">Entrar</button><p id="auth-feedback" class="feedback"></p></form></div>
+<div id="tech-app" class="layout hidden">
+<aside class="sidebar"><div class="brand">RCHD<span>.</span></div><p class="eyebrow">SUPORTE</p><button class="nav active" data-view="open">▦ &nbsp; Chamados</button><button class="nav" data-view="history">◷ &nbsp; Histórico</button><button class="nav hidden" id="admin-nav" data-view="admin">⚙ &nbsp; Administração</button><div class="sidebar-bottom"><span id="tech-name">Técnico</span><button id="logout" class="logout">Sair</button></div></aside>
+<main class="workspace"><header class="top"><div><p class="eyebrow">CENTRAL DE ATENDIMENTO</p><h1 id="page-title">Chamados</h1></div><button id="enable-notifications" class="button button-light" type="button">🔔 Ativar notificações</button></header>
+<div class="content"><section class="queue"><div class="queue-head"><h2 id="queue-title">Fila de atendimento</h2><input id="search" placeholder="Buscar chamado..."></div><div class="filters" id="ticket-filters"><button data-filter="Todos" class="selected">Todos</button><button data-filter="Aberto">Abertos</button><button data-filter="Em atendimento">Em atendimento</button><button data-filter="Aguardando cliente">Aguardando</button></div><div id="ticket-list" class="ticket-list"></div></section>
+<section class="detail" id="detail"><div class="empty">Selecione um chamado para visualizar o atendimento.</div></section></div></main></div>
+<div id="delete-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+  <div class="modal-card"><span class="modal-icon">!</span><h2 id="delete-title">Excluir chamado?</h2>
+    <p id="delete-description">Esta ação não poderá ser desfeita.</p>
+    <div class="modal-actions"><button type="button" id="cancel-delete" class="button button-light">Cancelar</button><button type="button" id="confirm-delete" class="button button-danger">Sim, excluir chamado</button></div>
+    <p id="delete-feedback" class="feedback" aria-live="polite"></p>
+  </div>
+</div>
+<div id="notify-toast" class="notify-toast"></div>
+<script src="/tech/tech.js"></script></body></html>

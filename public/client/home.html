@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Abrir chamado | RCHD</title><link rel="stylesheet" href="/client/style.css"></head>
+<body class="app-page"><header class="topbar"><a class="brand small" href="/client/index.html">RCHD<span>.</span></a><span>Central de atendimento</span></header>
+<main class="form-wrap"><a class="back" href="/client/index.html">← Voltar</a><div class="form-heading"><p class="eyebrow">NOVO ATENDIMENTO</p><h1>Como podemos ajudar?</h1><p>Preencha seus dados e descreva o que está acontecendo. Nossa equipe receberá sua solicitação.</p></div>
+<form id="ticket-form" class="card">
+<label>Seu nome<input name="name" required maxlength="120" placeholder="Nome completo"></label>
+<div class="two-col"><label>E-mail<input name="email" type="email" required maxlength="180" placeholder="voce@empresa.com"></label><label>Empresa <small>(opcional)</small><input name="company" maxlength="160" placeholder="Nome da empresa"></label></div>
+<label>Assunto<input name="subject" required maxlength="180" placeholder="Ex.: Não consigo acessar o sistema"></label>
+<label>Descreva o problema<textarea name="description" required maxlength="4000" rows="5" placeholder="Conte o que aconteceu e, se possível, quando começou..."></textarea></label>
+<label>Anexos <small>(opcional, até 10 arquivos de 100 MB cada)</small><input name="attachments" type="file" multiple></label>
+<button class="button" type="submit">Enviar chamado <span>→</span></button><p id="form-feedback" class="feedback" role="status"></p>
+</form><section id="ticket-result" class="card hidden"></section>
+</main><script src="/client/script.js"></script></body></html>
